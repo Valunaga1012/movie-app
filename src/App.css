@@ -1,0 +1,16 @@
+
+input {
+  background-color: #424242 !important;
+  border: 0px !important;
+  color: #c4c4c4 !important;
+}
+
+input::placeholder{
+  color: #c4c4c4 !important;
+}
+
+input:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: transparent;
+}
