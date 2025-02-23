@@ -17,7 +17,6 @@ export const useFetch = <T>(url: string): Params<T> => {
     useEffect(() => {
         const controller = new AbortController();
         const { signal } = controller;
-        console.log(signal);
         
         setLoading(true);
 
@@ -30,7 +29,6 @@ export const useFetch = <T>(url: string): Params<T> => {
                 }
 
                 const jsonData: T = await response.json();
-                console.log(jsonData);
                 
                 setData(jsonData)
                 setError(null);
