@@ -1,50 +1,56 @@
-# React + TypeScript + Vite
+# 📌 Proyecto Movie App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este repositorio contiene el código fuente de una aplicación React, construida con Bun, Vite.js y TypeScript. Bun se utiliza como gestor de paquetes y entorno de ejecución para optimizar el rendimiento y la velocidad de desarrollo.
 
-Currently, two official plugins are available:
+## 🚀 Requisitos previos
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Antes de comenzar, asegúrate de tener instalado lo siguiente en tu sistema:
 
-## Expanding the ESLint configuration
+- [Node.js](https://nodejs.org/) (opcional, pero recomendado para compatibilidad)
+- [Bun](https://bun.sh/) (Gestor de paquetes y runtime)
+- Git
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 📥 Instalación y configuración
 
-- Configure the top-level `parserOptions` property like this:
+1. **Clona el repositorio:**
+   ```sh
+   git clone https://docs.github.com/es/repositories
+   ```
+2. **Accede al directorio del proyecto:**
+   ```sh
+   cd nombre-del-repositorio
+   ```
+3. **Instala las dependencias con Bun:**
+   ```sh
+   bun install
+   ```
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## ▶️ Ejecutar el proyecto
+
+Para iniciar el entorno de desarrollo con Vite, ejecuta:
+
+```sh
+bun run dev
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Esto iniciará el servidor de desarrollo en `http://localhost:5173/` (o el puerto que configure Vite).
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## 🏗️ Construcción para producción
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+Para generar una versión optimizada para producción, usa:
+
+```sh
+bun run build
 ```
+
+Los archivos generados estarán en la carpeta `dist/`.
+
+## ✅ Pruebas
+
+Si el proyecto incluye pruebas, puedes ejecutarlas con:
+
+```sh
+bun run test
+```
+
+
