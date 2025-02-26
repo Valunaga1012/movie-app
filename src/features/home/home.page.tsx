@@ -1,14 +1,7 @@
-import { useState } from "react";
+import { Card } from "../../components/card/card";
+import { useSearch } from "../../components/context/search.context";
 import { Search } from "../../components/search/search.component";
 import { useFetch } from "../../hooks/useFetch";
-import { useSearch } from "../../components/context/search.context";
-import { Card } from "../../components/card/card";
-
-interface Data {
-  name: string;
-  lastName: string;
-  age: number;
-}
 
 export const HomePage = () => {
   const { value } = useSearch();
